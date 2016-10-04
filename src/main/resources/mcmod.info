@@ -1,0 +1,16 @@
+[
+{
+  "modid": "duskmod",
+  "name": "Dusk Mod",
+  "description": "A mod about the volatile balance of light and dark.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["mcprog"],
+  "credits": "mcprog",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
