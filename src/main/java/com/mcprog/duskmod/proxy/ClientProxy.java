@@ -1,5 +1,6 @@
 package com.mcprog.duskmod.proxy;
 
+import com.mcprog.duskmod.block.ModBlocks;
 import com.mcprog.duskmod.item.ModItems;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
@@ -18,6 +19,7 @@ public class ClientProxy extends CommonProxy {
     @Override
     public void init(FMLInitializationEvent event) {
         ModItems.registerRenders();
+        ModBlocks.registerRenders();
     }
 
     @Override

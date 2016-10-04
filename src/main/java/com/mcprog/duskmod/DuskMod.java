@@ -1,8 +1,10 @@
 package com.mcprog.duskmod;
 
+import com.mcprog.duskmod.block.ModBlocks;
 import com.mcprog.duskmod.creativetab.CreativeTabDuskModCore;
 import com.mcprog.duskmod.item.ModItems;
 import com.mcprog.duskmod.proxy.CommonProxy;
+import com.mcprog.duskmod.recipe.RecipesVanilla;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -41,6 +43,8 @@ public class DuskMod
         creativeTabDuskModCore = new CreativeTabDuskModCore();
         ModItems.preInit();
         ModItems.registerItems();
+        ModBlocks.preInit();
+        ModBlocks.registerBlocks();
         proxy.preInit(event);
     }
     
@@ -52,12 +56,12 @@ public class DuskMod
         Register event handlers
         Send IMC messages (idk what IMC is)
          */
-
+        RecipesVanilla.registerRecipes();
         proxy.init(event);
     }
 
     @EventHandler
-    public void init(FMLPostInitializationEvent event) {
+    public void postInit(FMLPostInitializationEvent event) {
         /*
         Mod compat or anything that needs other mods' inits to be done
          */
