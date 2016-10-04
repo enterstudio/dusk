@@ -9,8 +9,8 @@ import net.minecraft.item.Item;
  */
 public class CreativeTabDuskModCore extends CreativeTabs {
 
-    public CreativeTabDuskModCore(int index, String label) {
-        super(index, label);
+    public CreativeTabDuskModCore() {
+        super(getNextID(), "creative_tab_dusk_mod_core");
     }
 
     @Override

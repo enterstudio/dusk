@@ -1,6 +1,7 @@
 package com.mcprog.duskmod;
 
 import com.mcprog.duskmod.creativetab.CreativeTabDuskModCore;
+import com.mcprog.duskmod.item.ModItems;
 import com.mcprog.duskmod.proxy.CommonProxy;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.fml.common.Mod;
@@ -37,7 +38,9 @@ public class DuskMod
         Assign ore dict names
          */
 
-        creativeTabDuskModCore = new CreativeTabDuskModCore(CreativeTabs.getNextID(), "creative_tab_dusk_mod_core");
+        creativeTabDuskModCore = new CreativeTabDuskModCore();
+        ModItems.preInit();
+        ModItems.registerItems();
         proxy.preInit(event);
     }
     
